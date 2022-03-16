@@ -1,0 +1,15 @@
+{
+  "name": "url2pdf-aas",
+  "version": "1.0.0",
+  "main": "File_Converter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.2",
+    "url2pdf": "^0.4.7"
+  }
+}

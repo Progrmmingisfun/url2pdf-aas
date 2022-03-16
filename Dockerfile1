@@ -1,0 +1,40 @@
+# Choose the Image which has Node installed already
+#FROM node:alpine
+
+#FROM node:8.1.4
+
+# COPY all the files from Current Directory into the Container
+COPY ./ ./
+
+#or
+#cd [path to your node-docker directory]
+
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+# COPY package*.json ./
+
+# If you are building your code for production
+
+#RUN apt-get update && apt-get install -y curl
+#RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+#RUN apt-get update && apt-get install -y nodejs
+
+# Bundle app source
+#COPY . /url2pdf aas
+
+# Install the Project Dependencies like Express Framework
+RUN npm install
+
+# Tell that this image is going to Open a Port
+EXPOSE 8080
+
+# Default Command to launch the Application
+CMD ["npm", "start"]
+
+#CMD ["echo", "Hello StackOverflow!"]
+
+#CMD ["node", "/File_Converter.js"]
+
+#CMD ["node", "/server.js"]
